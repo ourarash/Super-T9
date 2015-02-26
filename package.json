@@ -1,0 +1,37 @@
+{
+  "name": "super-t9",
+  "version": "1.0.0",
+  "description": "Node T9 Predictive Text App",
+  "main": "super-t9.js",
+  "scripts": {
+    "test": "node test/test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/joelsaxton/SuperT9.git"
+  },
+  "keywords": [
+    "NodeJS",
+    "T9",
+    "Predictive",
+    "Text"
+  ],
+  "devDependencies": {
+    "nodeunit": "*"
+  },
+  "engines": {
+    "node": ">= 0.6"
+  },
+  "scripts": {
+    "test": "mocha --reporter spec --check-leaks --bail test/",
+    "test-cov": "istanbul cover node_modules/mocha/bin/_mocha -- --reporter dot --check-leaks test/",
+    "test-travis": "istanbul cover node_modules/mocha/bin/_mocha --report lcovonly -- --reporter spec --check-leaks test/"
+  },
+  "author": "Joel Saxton",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/joelsaxton/SuperT9/issues"
+  },
+  "homepage": "https://github.com/joelsaxton/SuperT9",
+  "engines": { "node": "*" }
+}
