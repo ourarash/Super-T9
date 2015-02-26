@@ -19,7 +19,9 @@ $ npm install super-t9
 ```js
 var t9 = require('super-t9');
 
-t9.setDictionary
+t9.setWordList('myWordList', 'csv', 'mywordlist.csv');
+
+var matches = t9.getWordsFromNumber(628873, 'myWordList');
 ```
 
 ## License
