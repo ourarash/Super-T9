@@ -3,7 +3,7 @@
 
 
 
-# super-t9
+# Super-T9
 
 Super T9 Phone Keypad to Word Mapper
 
