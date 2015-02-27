@@ -71,13 +71,11 @@ module.exports.getWordsFromNumber = function (number, name){
     var finalList = wordList[name];
     var digits = number.toString().split('');
     var wordLength = digits.length;
-    var index = 0;
 
     // Search loop
-    for (var digit in digits){
-        if (digits[digit] <= 1) return false;
-        finalList = getWordsFromLetters(digits[digit], index, wordLength, finalList);
-        index++;
+    for (var i = 0; i < digits.length; i++){
+        if (digits[i] <= 1) return false;
+        finalList = getWordsFromLetters(digits[i], i, wordLength, finalList);
     }
 
     return finalList;
@@ -97,7 +95,7 @@ function getWordsFromLetters(digit, index, wordLength, wordList) {
 
     for (var letter in map[digit]) {
         for (var word in wordList) {
-            if (index == wordList[word].indexOf(map[digit][letter]) && wordLength == wordList[word].length){
+            if (wordLength == wordList[word].length && map[digit][letter] == wordList[word][index]) {
                 matches.push(wordList[word]);
             }
         }

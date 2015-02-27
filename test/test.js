@@ -66,11 +66,20 @@ exports.testGetWordsFromNumber2 = function(test) {
     test.done();
 };
 
-// ['home', 'gone']
+// ['arrive']
+exports.testGetWordsFromNumber2 = function(test) {
+    var matches = t9.getWordsFromNumber(277483, 'big');
+    test.expect(1);
+    var expected = ['arrive'];
+    test.equal(JSON.stringify(matches), JSON.stringify(expected));
+    test.done();
+};
+
+// ['good', 'home', 'gone']
 exports.testGetWordsFromNumber3 = function(test) {
     var matches = t9.getWordsFromNumber(4663, 'big');
     test.expect(1);
-    var expected = ['home', 'gone'];
+    var expected = ['good', 'home', 'gone'];
     test.equal(JSON.stringify(matches), JSON.stringify(expected));
     test.done();
 };
