@@ -17,7 +17,8 @@
     "Text"
   ],
   "devDependencies": {
-    "nodeunit": "*"
+    "nodeunit": "*",
+    "fs": "*"
   },
   "engines": {
     "node": ">= 0.6"
